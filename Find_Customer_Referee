@@ -49,3 +49,37 @@ Output:
 
 Select name from Customer where referee_id <> 2 or referee_id IS NULL;
 
+Accepted
+Runtime: 90 ms
+
+Case 1
+
+Input
+
+Customer 
+| id | name | referee_id |
+| -- | ---- | ---------- |
+| 1  | Will | null       |
+| 2  | Jane | null       |
+| 3  | Alex | 2          |
+| 4  | Bill | null       |
+| 5  | Zack | 1          |
+| 6  | Mark | 2          |
+
+
+Output
+| name |
+| ---- |
+| Will |
+| Jane |
+| Bill |
+| Zack |
+
+
+Expected
+| name |
+| ---- |
+| Will |
+| Jane |
+| Bill |
+| Zack |
